@@ -64,11 +64,11 @@ $('#screen').on('tap', function (){
 
 function jugar ()
 {
-alert (nivel);
+//alert (nivel);
 	if (nivel<maximo)
 	 {		 
 	  nueva = Math.floor((Math.random() * 4) + 1);
-	  alert (nueva);
+	  $('#screen').append(nueva);
 	  secuencia [nivel+1] = nueva;
 	 }
 	 
@@ -83,9 +83,10 @@ function tocar_secuencia()
  {
   for (i = 0; i < secuencia.length; i++)
    { 
-    alert ("secuencia "+ i + ":" + secuencia[i]);
+//    alert ("secuencia "+ i + ":" + secuencia[i]);
     tocar (secuencia[i]); 
-	alert ("despues");
+	//alert ("despues");
+	 window.setTimeout(function(){},2000);
    }	 
  }
 
@@ -93,6 +94,7 @@ function tocar(cuadro)
  {
 	 $('#B'+cuadro).addClass('pulsado');
 	 audio.play('B'+cuadro);
+	  window.setTimeout(function(){},2000);
 	 $('#B'+cuadro).removeClass('pulsado'); 
 	 }
 
