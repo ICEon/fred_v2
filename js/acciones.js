@@ -16,7 +16,7 @@ audio.preloadFX('B4', 'audio/F.mp3', function(msg){}, function(msg){ alert( 'Err
 	
 $('#btnjugar').on('tap', function (){
 	$( "body" ).pagecontainer( "change", "#jugar", { transition: "slide" });
-	jugar();
+	
 //alert(	$('#jugar').height());
 //alert(	$('#piejuego').height());
 /*$('#uno').height((($('#jugar').height()-$('#piejuego').height())-5)/2);
@@ -36,7 +36,7 @@ var content = screen - header - footer ;
 //alert (content);
 $('.cuadro').height(content/2);
 //$(".ui-content").height(content);
-
+jugar();
 });
 
 
@@ -61,10 +61,11 @@ $('.cuadro').on('vmouseup',function(){
 
 function jugar ()
 {
-
+alert (nievl);
 	if (nivel<maximo)
 	 {		 
 	  nueva = Math.floor((Math.random() * 4) + 1);
+	  alert (nueva);
 	  secuencia [nivel+1] = nueva;
 	 }
 	 
@@ -79,6 +80,7 @@ function tocar_secuencia()
  {
   for (i = 0; i < secuencia.length; i++)
    { 
+    alert ("secuencia "+ i + ":" + secuencia[i]);
     tocar (secuencia[i]);
    }	 
  }
