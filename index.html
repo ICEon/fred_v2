@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+        <title>Fred</title>
+
+        <!--grupo CSS-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+                <link rel="stylesheet" href="css/mas.css" />
+        
+
+
+        <!--grupo JavaScript-->
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/acciones.js" type="text/javascript"></script>
+        
+        <script src="phonegap.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+<!-- Principal -->
+     <div data-role="page" id="principal" >   
+
+     
+         
+         <div data-role="main" class="ui-content" >
+          <a href="#" class="ui-btn ui-shadow ui-icon-check ui-btn-icon-right" data-transition="fade" id="btnjugar">Jugar</a>
+        </div>
+        
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+        <div align="center">
+         @Francisco José Couto Peláez
+        </div>        
+        </div>
+        
+     </div>
+  
+<!-- Principal -->
+
+
+<!-- Jugar -->
+     <div data-role="page" id="jugar" >   
+
+     
+         
+         <div data-role="main" class="ui-content" id="juego">
+          <div>
+           <div class="cuadro" id="uno" style="background-color:#F00; width:50%; float:left;">
+           &nbsp;
+           </div>
+           <div class="cuadro" id="dos" style="background-color:#0F0; width:50%; float:left;">
+           &nbsp;
+           </div>
+           <div class="cuadro" id="tres" style="background-color:#00F; width:50%; float:left;">
+           &nbsp;
+           </div>
+           <div class="cuadro" id="cuatro" style="background-color:#FF0; width:50%;  float:left;">
+           &nbsp;
+           </div>
+          </div>
+        </div>
+        
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" id="piejuego">
+        <h1>
+        <div id="screen">
+          Pulsó: 
+        </div>        
+        </h1>
+        </div>
+        
+     </div>
+  
+<!-- Principal -->
+
+ </body>
+</html> 

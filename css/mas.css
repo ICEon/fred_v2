@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cuadro
+{
+
+	width:50%;
+	float:left;
+}
+
+.pulsado
+{
+	background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#FFFFFF), to(#FFFFFF));
+}
+
+#B1
+{
+		background-color:#F00;
+}
+
+#B2
+{
+		background-color:#0F0;
+}
+
+#B3
+{
+		background-color:#00F;
+}
+
+#B4
+{
+		background-color:#FF0;
+}
