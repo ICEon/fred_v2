@@ -1,5 +1,9 @@
 // JavaScript Document
 $(document).ready(function(e) {	
+var maximo = 19;
+var nivel = -1;
+var secuencia = [];
+var nueva;
 
 document.addEventListener("deviceready",function(){
 	
@@ -12,6 +16,7 @@ audio.preloadFX('B4', 'audio/F.mp3', function(msg){}, function(msg){ alert( 'Err
 	
 $('#btnjugar').on('tap', function (){
 	$( "body" ).pagecontainer( "change", "#jugar", { transition: "slide" });
+	jugar();
 //alert(	$('#jugar').height());
 //alert(	$('#piejuego').height());
 /*$('#uno').height((($('#jugar').height()-$('#piejuego').height())-5)/2);
@@ -46,7 +51,7 @@ $('.cuadro').on('vmousedown',function(){
 	$(this).addClass('pulsado');
 	
 $('#screen').append(quien($(this).attr('id')));
-	
+	jugar();
 });
 
 $('.cuadro').on('vmouseup',function(){
@@ -54,9 +59,37 @@ $('.cuadro').on('vmouseup',function(){
 });
 
 
+function jugar ()
+{
 
+	if (nivel<maximo)
+	 {		 
+	  nueva = Math.floor((Math.random() * 4) + 1);
+	  secuencia [nivel+1] = nueva;
+	 }
+	 
+  tocara_secuencia();	 
+  nivel++;
+ //tocar la secuencia
+ //esperar
+ 
+}
 
+function tocar_secuencia()
+ {
+  for (i = 0; i < secuencia.length; i++)
+   { 
+    tocar (secuencia[i]);
+   }	 
+ }
 
+function tocar(cuadro)
+ {
+	 $("B"+cuadro).addClass('pulsado');
+	 audio.play("B"+cuadro);
+	 setTimeout ("$('B'+cuadro).removeClass('pulsado');", 500); 
+	 
+ }
 
 	}); 
 });
