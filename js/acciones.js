@@ -10,7 +10,7 @@ audio.preloadFX('B3', 'audio/E.mp3', function(msg){}, function(msg){ alert( 'Err
 audio.preloadFX('B4', 'audio/F.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });	
 
 	
-$('#btnjugar').on('click', function (){
+$('#btnjugar').on('tap', function (){
 	$( "body" ).pagecontainer( "change", "#jugar", { transition: "slide" });
 //alert(	$('#jugar').height());
 //alert(	$('#piejuego').height());
