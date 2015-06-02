@@ -84,16 +84,17 @@ function tocar_secuencia()
   for (i = 0; i < secuencia.length; i++)
    { 
     alert ("secuencia "+ i + ":" + secuencia[i]);
-    setTimeout ("tocar (secuencia[i]);", 1000); 
+    tocar (secuencia[i]); 
 	alert ("despues");
    }	 
  }
 
 function tocar(cuadro)
  {
-	 $('#B1').addClass('pulsado');
+	 $('#B'+cuadro).addClass('pulsado');
 	 audio.play('B'+cuadro);
-	 setTimeout ("$('#B1').removeClass('pulsado');", 1000); }
+	 //setTimeout ("$('#B'+cuadro).removeClass('pulsado');", 1000); 
+	 }
 
 	}); 
 });
