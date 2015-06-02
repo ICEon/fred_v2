@@ -86,7 +86,7 @@ function tocar_secuencia()
 //    alert ("secuencia "+ i + ":" + secuencia[i]);
     tocar (secuencia[i]); 
 	//alert ("despues");
-	 dormir (2000);
+	 dormir (500);
    }	 
  }
 
@@ -94,7 +94,7 @@ function tocar(cuadro)
  {
 	 $('#B'+cuadro).addClass('pulsado');
 	 audio.play('B'+cuadro);
-dormir(2000);
+dormir(500);
 	 $('#B'+cuadro).removeClass('pulsado'); 
 	 }
 
