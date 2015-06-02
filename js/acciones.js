@@ -19,16 +19,16 @@ $('#dos').height((($('#jugar').height()-$('#piejuego').height())-5)/2);
 $('#tres').height((($('#jugar').height()-$('#piejuego').height())-5)/2);
 $('#cuatro').height((($('#jugar').height()-$('#piejuego').height())-5)/2);*/
 var screen = $.mobile.getScreenHeight();
-alert (screen);
+//alert (screen);
 var header = $(".ui-header").hasClass("ui-header-fixed") ? $(".ui-header").outerHeight()  - 1 : $(".ui-header").outerHeight();
-alert (header);
+//alert (header);
 var footer = $(".ui-footer").hasClass("ui-footer-fixed") ? $(".ui-footer").outerHeight() - 1 : $(".ui-footer").outerHeight();
 
 /* content div has padding of 1em = 16px (32px top+bottom). This step
    can be skipped by subtracting 32px from content var directly. */
 var contentCurrent = $(".ui-content").outerHeight() - $(".ui-content").height();
 var content = screen - header - footer ;
-alert (content);
+//alert (content);
 $('.cuadro').height(content/2);
 //$(".ui-content").height(content);
 
