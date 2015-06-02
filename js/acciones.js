@@ -61,7 +61,7 @@ $('.cuadro').on('vmouseup',function(){
 
 function jugar ()
 {
-alert (nievl);
+alert (nivel);
 	if (nivel<maximo)
 	 {		 
 	  nueva = Math.floor((Math.random() * 4) + 1);
