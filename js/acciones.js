@@ -51,13 +51,16 @@ $('.cuadro').on('vmousedown',function(){
 	$(this).addClass('pulsado');
 	
 $('#screen').append(quien($(this).attr('id')));
-	jugar();
+
 });
 
 $('.cuadro').on('vmouseup',function(){
 	$(this).removeClass('pulsado');
 });
 
+$('#screen').on('tap', function (){
+	jugar();	
+});
 
 function jugar ()
 {
@@ -81,7 +84,7 @@ function tocar_secuencia()
   for (i = 0; i < secuencia.length; i++)
    { 
     alert ("secuencia "+ i + ":" + secuencia[i]);
-    tocar (secuencia[i]);
+    setTimeout ("tocar (secuencia[i]);", 1000); 
    }	 
  }
 
@@ -89,7 +92,7 @@ function tocar(cuadro)
  {
 	 $("B"+cuadro).addClass('pulsado');
 	 audio.play("B"+cuadro);
-	 setTimeout ("$('B'+cuadro).removeClass('pulsado');", 500); 
+	 setTimeout ("$('B'+cuadro).removeClass('pulsado');", 1000); 
 	 
  }
 
