@@ -69,7 +69,7 @@ alert (nivel);
 	  secuencia [nivel+1] = nueva;
 	 }
 	 
-  tocara_secuencia();	 
+  tocar_secuencia();	 
   nivel++;
  //tocar la secuencia
  //esperar
