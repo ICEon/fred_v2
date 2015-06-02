@@ -86,7 +86,7 @@ function tocar_secuencia()
 //    alert ("secuencia "+ i + ":" + secuencia[i]);
     tocar (secuencia[i]); 
 	//alert ("despues");
-	 window.setTimeout(function(){},2000);
+	 dormir (2000);
    }	 
  }
 
@@ -94,9 +94,16 @@ function tocar(cuadro)
  {
 	 $('#B'+cuadro).addClass('pulsado');
 	 audio.play('B'+cuadro);
-	  window.setTimeout(function(){},2000);
+dormir(2000);
 	 $('#B'+cuadro).removeClass('pulsado'); 
 	 }
+
+function dormir(miliseconds) {
+           var currentTime = new Date().getTime();
+
+           while (currentTime + miliseconds >= new Date().getTime()) {
+           }
+       }
 
 	}); 
 });
