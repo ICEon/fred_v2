@@ -95,7 +95,7 @@ function tocar(cuadro)
 	 $('#B'+cuadro).addClass('pulsado');
 	 audio.play('B'+cuadro);
 dormir(500);
-	 $('#B'+cuadro).removeClass('pulsado'); 
+	// $('#B'+cuadro).removeClass('pulsado'); 
 	 }
 
 function dormir(miliseconds) {
