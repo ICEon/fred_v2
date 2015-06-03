@@ -94,10 +94,12 @@ function tocar(cuadro)
  {
 	 
 	 $('#B'+cuadro).addClass('pulsado');
-	 dormir(200);
+
 	 audio.play('B'+cuadro);
-	 dormir(200);
-	 $('#B'+cuadro).removeClass('pulsado'); 
+
+	 setTimeout(function(){
+$('#B'+cuadro).removeClass('pulsado');
+}, 2000); 
 	 }
 
 function dormir(miliseconds) {
