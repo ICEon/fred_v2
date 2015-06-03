@@ -93,9 +93,14 @@ function tocar_secuencia()
 function tocar(cuadro)
  {
 	 
+	 setTimeout(function(){
 	 $('#B'+cuadro).addClass('pulsado');
+}, 2000); 
 
+	 setTimeout(function(){
 	 audio.play('B'+cuadro);
+}, 2000); 
+
 
 	 setTimeout(function(){
 $('#B'+cuadro).removeClass('pulsado');
