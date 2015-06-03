@@ -97,13 +97,15 @@ dormir (1000);
 function tocar(cuadro)
  {
 	 
-   $('#B'+cuadro).addClass('pulsado');
+
 
 	 setTimeout(function(){
-
+   $('#B'+cuadro).addClass('pulsado');
+   
+    	 audio.play('B'+cuadro);
   $('#B'+cuadro).removeClass('pulsado');
- 	 audio.play('B'+cuadro);
-}, 2000); 
+
+}, 1000); 
 	 }
 
 function dormir(miliseconds) {
