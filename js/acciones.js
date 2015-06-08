@@ -5,7 +5,8 @@ $(document).ready(function(e) {
 
 document.addEventListener("deviceready",function() {
 		var db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", createFromLocation: 1});
-alert (cargarnombrejugador());
+var actual = cargarnombrejugador();
+$('#nombre').text(actual);
 
    
           function cargarnombrejugador()
@@ -15,8 +16,8 @@ alert (cargarnombrejugador());
    ejecutar.executeSql (sql, undefined,
    function (ejecutar, resultado){	
 	var datosJugador = resultado.rows.item (0);
-  jugador_actual =(datosJugador.NombreJugador);
-   alert (jugador_actual);
+   var jugador_actual =(datosJugador.NombreJugador);
+
    return (jugador_actual);
 
 
