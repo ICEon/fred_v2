@@ -7,7 +7,7 @@ document.addEventListener("deviceready",function() {
    
           function cargarnombrejugador()
  {
-	  db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", androidLockWorkaround: 1});
+	  db = window.sqlitePlugin.openDatabase({name: "db/ColoresBD.db", androidLockWorkaround: 1});
 		  db.transaction (function (ejecutar){
    var sql = "SELECT NombreJugador FROM jugador";
    ejecutar.executeSql (sql, undefined,
