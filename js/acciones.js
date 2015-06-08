@@ -3,7 +3,7 @@ $(document).ready(function(e) {
 
 document.addEventListener("deviceready",function() {
 		var db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", createFromLocation: 1});
-
+alert (db);
    
           function cargarnombrejugador()
  {
