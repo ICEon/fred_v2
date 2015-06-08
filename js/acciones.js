@@ -13,16 +13,18 @@ $("#nombre").text(cargarnombrejugador());
    function (ejecutar, resultado){	
 	var datosJugador = resultado.rows.item (0);
   jugador_actual =(datosJugador.NombreJugador);
-     return (jugador_actual);
-
+     
+return (jugador_actual);
    }, error);
-		  });
-		  
-		  function error (transaction, err)
+   
+   	  function error (transaction, err)
        {
         alert ("Error de BD: " + err.message);
         return false;
        } 
+		  });
+		  
+	
  }
  
 
