@@ -3,10 +3,11 @@ $(document).ready(function(e) {
 
 document.addEventListener("deviceready",function() {
 		var db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", createFromLocation: 1});
-alert (db);
+
    
           function cargarnombrejugador()
  {
+	  db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", androidLockWorkaround: 1});
 		  db.transaction (function (ejecutar){
    var sql = "SELECT NombreJugador FROM jugador";
    ejecutar.executeSql (sql, undefined,
