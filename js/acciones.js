@@ -19,7 +19,7 @@ $("#nombre").text(cargarnombrejugador());
    
    	 
 		  });
-		  
+		  alert (jugador_actual);
 	return (jugador_actual);
  }
  
