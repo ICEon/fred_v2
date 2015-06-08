@@ -3,7 +3,7 @@ $(document).ready(function(e) {
 
 document.addEventListener("deviceready",function() {
 		var db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", createFromLocation: 1});
-$("#nombre").text(cargarnombrejugador());
+
    
           function cargarnombrejugador()
  {
@@ -13,14 +13,13 @@ $("#nombre").text(cargarnombrejugador());
    function (ejecutar, resultado){	
 	var datosJugador = resultado.rows.item (0);
   jugador_actual =(datosJugador.NombreJugador);
-     
+$("#nombre").text(jugador_actual);     
 
    });
    
    	 
 		  });
-		  alert (jugador_actual);
-	return (jugador_actual);
+
  }
  
 
@@ -48,7 +47,7 @@ $(this).stop().animate({opacity: '0.1'}, {		//animate the element to appear to f
 
 		
 		$('#btnconfigurar').on ('tap', function (){
-$("#nombreactual").attr('placeholder', cargarnombrejugador());
+//$("#nombreactual").attr('placeholder', cargarnombrejugador());
 		});
 		
 });
