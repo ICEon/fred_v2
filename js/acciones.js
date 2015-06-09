@@ -52,15 +52,13 @@ $("#nombreactual").val ($('#nombre').text());
 		});	
 		
 		$('#btnguardar').on('tap', function(){
-					  db.transaction (function (ejecutar){
-
-   var sql = "UPDATE jugador SET NombreJugador=" + $("#nombreactual").val()  + " WHERE ClaveJugador = '1'";
-   ejecutar.executeSql (sql, undefined, function (ejecutar, resultado){	
-	 alert (resultado);
-
-   });
-   
-		  });
+			var nuevonombre = $("#nombreactual").val();
+			db.transaction(
+    function (transaction) {
+        transaction.executeSql("UPDATE jugador SET NombreJugador=? WHERE ClaveJugador = '1';",
+            [ nuevonombre ]); // array of values for the ? placeholders
+    }
+);
 cargarnombrejugador();
 		  
 		}); //update
