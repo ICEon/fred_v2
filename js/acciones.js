@@ -43,7 +43,7 @@ $(this).stop().animate({opacity: '0.1'}, {		//animate the element to appear to f
 
 	
 		$('#btnconfigurar').on ('tap', function (){
-			
+			alert ($('#nombre').text());
 $("#nombreactual").val ($('#nombre').text());
 		});	
 		
