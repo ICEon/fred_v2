@@ -42,11 +42,12 @@ $(this).stop().animate({opacity: '0.1'}, {		//animate the element to appear to f
 			});												//end animation
 
 	
-		$('#btnconfigurar').on ('tap', function (){
-			alert ($('#nombre').text());
-$("#nombreactual").val ($('#nombre').text());
-		});	
 		
 });
+
+		$('#btnconfigurar').on ('tap', function (){
+			
+$("#nombreactual").val ($('#nombre').text());
+		});	
 });
 });
