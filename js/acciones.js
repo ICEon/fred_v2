@@ -2,24 +2,18 @@
 
 // JavaScript Document
 $(document).ready(function(e) {	
-
 document.addEventListener("deviceready",function() {
 		var db = window.sqlitePlugin.openDatabase({name: "ColoresBD.db", createFromLocation: 1});
-var actual = cargarnombrejugador();
-$('#nombre').text(actual);
-
+cargarnombrejugador();
    
           function cargarnombrejugador()
  {
 		  db.transaction (function (ejecutar){
    var sql = "SELECT NombreJugador FROM jugador";
-   ejecutar.executeSql (sql, undefined,
-   function (ejecutar, resultado){	
-	var datosJugador = resultado.rows.item (0);
-   var jugador_actual =(datosJugador.NombreJugador);
-
-   return (jugador_actual);
-
+   ejecutar.executeSql (sql, undefined, function (ejecutar, resultado){	
+	 var datosJugador = resultado.rows.item (0);
+     jugador_actual =(datosJugador.NombreJugador);   
+     $("#nombre").text(jugador_actual);
 
    });
 		  });
@@ -47,7 +41,11 @@ $(this).stop().animate({opacity: '0.1'}, {		//animate the element to appear to f
 				}
 			});												//end animation
 
-		
+	
+		$('#btnconfigurar').on ('tap', function (){
+			
+$("#nombreactual").val ($('#nombre').text());
+		});	
 		
 });
 });
