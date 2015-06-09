@@ -48,6 +48,20 @@ $(this).stop().animate({opacity: '0.1'}, {		//animate the element to appear to f
 		$('#btnconfigurar').on ('tap', function (){
 			
 $("#nombreactual").val ($('#nombre').text());
+
 		});	
+		
+		$('#btnguardar').on('tap', function(){
+					  db.transaction (function (ejecutar){
+   var sql = "UPDATE NombreJugador FROM jugador WHERE ClaveJugador = '1'";
+   ejecutar.executeSql (sql, undefined, function (ejecutar, resultado){	
+	 alert (resultado);
+
+   });
+   
+		  });
+cargarnombrejugador();
+		  
+		}); //update
 });
 });
